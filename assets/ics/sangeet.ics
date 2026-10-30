@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AkshiSawRabh//Invite//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sangeet-akshisawrabh@invite
+DTSTAMP:20261030T063000Z
+DTSTART:20261115T113000Z
+DTEND:20261115T180000Z
+SUMMARY:Sangeet · Saurabh & Akshita
+DESCRIPTION:Followed by dinner\nEngagement & Sangeet\n#AkshiSawRabh\nMap: 
+ https://www.google.com/maps/search/?api=1&query=26.823449\,75.7545271
+LOCATION:Princess Banquet\, Majestic Marriage Garden & Resorts\, Kesar Cir
+ cle\, Muhana Mandi Road\, Jaipur
+URL:https://www.google.com/maps/search/?api=1&query=26.823449,75.7545271
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Sangeet in 2 hours
+END:VALARM
+END:VEVENT
+END:VCALENDAR

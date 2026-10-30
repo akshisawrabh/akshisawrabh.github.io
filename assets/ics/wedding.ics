@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AkshiSawRabh//Invite//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:wedding-akshisawrabh@invite
+DTSTAMP:20261030T063000Z
+DTSTART:20261116T113000Z
+DTEND:20261116T190000Z
+SUMMARY:Baraat & Phere · Saurabh & Akshita
+DESCRIPTION:Baraat leaves from the main gate of Majestic Resorts\nBaraat N
+ ikasi · Reception · Phere\n#AkshiSawRabh\nMap: https://www.google.com/m
+ aps/search/?api=1&query=26.823449\,75.7545271
+LOCATION:Umrao Banquet\, Majestic Marriage Garden & Resorts\, Kesar Circle
+ \, Muhana Mandi Road\, Jaipur
+URL:https://www.google.com/maps/search/?api=1&query=26.823449,75.7545271
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Baraat & Phere in 2 hours
+END:VALARM
+END:VEVENT
+END:VCALENDAR

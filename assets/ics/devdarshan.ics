@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AkshiSawRabh//Invite//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:devdarshan-akshisawrabh@invite
+DTSTAMP:20261030T063000Z
+DTSTART:20261116T050000Z
+DTEND:20261116T083000Z
+SUMMARY:Devdarshan · Saurabh & Akshita
+DESCRIPTION:Followed by lunch\n#AkshiSawRabh\nMap: https://www.google.com/
+ maps/search/?api=1&query=26.823449\,75.7545271
+LOCATION:The Fort Hotel\, Majestic Marriage Garden & Resorts\, Kesar Circl
+ e\, Muhana Mandi Road\, Jaipur
+URL:https://www.google.com/maps/search/?api=1&query=26.823449,75.7545271
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Devdarshan in 2 hours
+END:VALARM
+END:VEVENT
+END:VCALENDAR

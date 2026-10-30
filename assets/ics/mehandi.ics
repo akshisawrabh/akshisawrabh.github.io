@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AkshiSawRabh//Invite//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:mehandi-akshisawrabh@invite
+DTSTAMP:20261030T063000Z
+DTSTART:20261114T083000Z
+DTEND:20261114T163000Z
+SUMMARY:Mehandi · Saurabh & Akshita
+DESCRIPTION:Followed by high tea & dinner\nMehandi & Mayra\n#AkshiSawRabh\
+ nMap: https://www.google.com/maps/place/Radha+bagh/data=!4m2!3m1!1s0x0:0x
+ a50f7223b6aae7ff
+LOCATION:Radha Bagh\, Ganesh Nagar\, Muhana Mandi Road\, Jaipur
+URL:https://www.google.com/maps/place/Radha+bagh/data=!4m2!3m1!1s0x0:0xa50
+ f7223b6aae7ff
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Mehandi in 2 hours
+END:VALARM
+END:VEVENT
+END:VCALENDAR
