@@ -93,14 +93,9 @@ window.INVITE = {
   countdownTo: "2026-11-16T18:00:00+05:30",
   rsvpWhatsApp: "",            // e.g. "919876543210" — empty lets the guest pick a contact
   music: "assets/jashn-e-bahara.mp3", // Jashn-E-Bahara (Jodhaa Akbar): starts on the cover tap, loops; mute button in the bar
-  dateRange: "14 – 16 November 2026",
+  dateRange: "15 – 16 November 2026",
 
   events: [
-    { id: "mehandi", icon: "mehandi", name: "Mehandi", sub: "Mehandi & Mayra", pos: "50% 62%", heroPos: "50% 64%", heroH: "52dvh", steps: [["Mehandi", "2:00 PM"], ["Mayra", "7:30 PM"]], day: "Saturday", date: "14 Nov", dnum: "14", month: "November",
-      time: "2:00 PM", note: "Followed by high tea & dinner",
-      venue: "Radha Bagh", address: "Ganesh Nagar, Muhana Mandi Road, Jaipur",
-      map: "https://www.google.com/maps/place/Radha+bagh/data=!4m2!3m1!1s0x0:0xa50f7223b6aae7ff",
-      start: "2026-11-14T14:00:00+05:30", end: "2026-11-14T22:00:00+05:30", hue: "#8d7cc9" },
     { id: "haldi", icon: "haldi", name: "Haldi", pos: "50% 58%", heroPos: "50% 60%", heroH: "55dvh", day: "Sunday", date: "15 Nov", dnum: "15", month: "November",
       time: "11:00 AM", note: "Followed by lunch",
       venue: "The Fort Hotel", address: "Majestic Marriage Garden & Resorts, Kesar Circle, Muhana Mandi Road, Jaipur",
@@ -495,13 +490,17 @@ body.ic-opened:not(.scrolled):not(.evd-open) .scroll-hint{opacity:1;transition-d
   -webkit-tap-highlight-color:transparent;transition:transform .22s cubic-bezier(.2,.7,.2,1);color:#fff;font:inherit;will-change:transform}
 .tile:active{transform:scale(.97)}
 .tile.main{grid-column:1/-1;aspect-ratio:1.75/1}
+.tile.wide{grid-column:1/-1;aspect-ratio:2/1}   /* a lone leftover tile spans the row (odd number of regular events) */
 .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.9)}
 .tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.06) 0%,rgba(0,0,0,0) 36%,rgba(0,0,0,0) 48%,color-mix(in srgb,var(--c) 52%,#1a1a1a) 76%,color-mix(in srgb,var(--c) 70%,#111) 100%);}
 .tile.dark::after{background:linear-gradient(180deg,rgba(9,18,46,.2) 0%,rgba(9,18,46,0) 36%,rgba(9,18,46,0) 50%,rgba(14,27,66,.85) 78%,#0b163a 100%)}
-.tile .tag{position:absolute;top:10px;left:10px;z-index:2;font-family:var(--f-caps);font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);background:rgba(251,246,234,.92);border-radius:999px;padding:5px 9px}
+.tile .tag{position:absolute;top:10px;left:10px;z-index:2;display:flex;flex-direction:column;gap:2px;font-family:var(--f-caps);font-size:.56rem;line-height:1.15;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);background:rgba(251,246,234,.92);border-radius:10px;padding:6px 9px 5px}
+.tile .tag b{font-size:.66rem;font-weight:600;letter-spacing:.08em;color:var(--c2)}
+.tile.dark .tag b{color:#8f6f2a}
 .tile .tx{position:absolute;left:12px;right:42px;bottom:11px;z-index:2}
 .tile h3{font-family:var(--f-display);font-weight:700;font-size:1.45rem;line-height:1.05;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.5),0 0 12px rgba(0,0,0,.25)}
 .tile.main h3{font-size:1.95rem}
+.tile.wide h3{font-size:1.6rem}
 .tile .tm{display:block;margin-top:4px;font-family:var(--f-caps);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:#fff;-webkit-text-stroke:.3px #fff;text-shadow:0 1px 2px rgba(0,0,0,.45)}
 .tile .go{position:absolute;right:10px;bottom:11px;z-index:2;width:28px;height:28px;border-radius:50%;background:rgba(251,246,234,.92);display:grid;place-items:center;color:var(--c2)}
 .tile .go svg{width:12px;height:12px}
@@ -558,11 +557,11 @@ body.ic-opened:not(.scrolled):not(.evd-open) .scroll-hint{opacity:1;transition-d
 body.evd-open{overflow:hidden}
 @media (max-height:700px){.evd-hero{flex-basis:calc(var(--hero,48dvh) * .79);min-height:200px}.evd-tt h2{font-size:1.9rem}.evd-when{padding-bottom:8px}.evd-when .n{font-size:2.4rem}.evd-steps li{padding:4px 0 4px 22px;font-size:1.06rem}.evd-ven{font-size:1.12rem}.evd-ven span{font-size:.98rem}.evd-bd{gap:7px;padding-top:10px}.evd-act .ic-btn{padding:.8em 1em}#evd.many .evd-hero{flex-basis:calc(var(--hero,48dvh) * .72)}#evd.many .evd-steps li{padding:3px 0 3px 22px;font-size:1rem}}
 
-.family{border-radius:12px 12px 150px 150px / 12px 12px 110px 110px;padding:30px 22px 70px;text-align:center;border:7px solid var(--peach);outline:1px solid var(--terra);outline-offset:-5px;box-shadow:0 0 0 1px var(--terra),0 14px 40px rgba(80,60,20,.14)}
-.family .grp{margin-top:20px}
-.family .grp h4{font-family:var(--f-script);font-weight:400;font-size:2.1rem;color:var(--green-2);line-height:1;margin-bottom:8px}
-.family p{font-size:1.05rem;line-height:1.55}
-.family .res{margin-top:22px;font-style:italic;color:var(--muted)}
+.family{border-radius:12px 12px 150px 150px / 12px 12px 110px 110px;padding:26px 22px 58px;text-align:center;border:7px solid var(--peach);outline:1px solid var(--terra);outline-offset:-5px;box-shadow:0 0 0 1px var(--terra),0 14px 40px rgba(80,60,20,.14)}
+.family .grp{margin-top:15px}
+.family .grp h4{font-family:var(--f-script);font-weight:400;font-size:1.9rem;color:var(--green-2);line-height:1;margin-bottom:6px}
+.family p{font-size:1.02rem;line-height:1.42;text-wrap:balance}
+.family .res{margin-top:16px;font-style:italic;color:var(--muted)}
 
 footer{text-align:center;padding:34px 16px 0;color:var(--gold-2)}
 footer .tag{font-family:var(--f-caps);letter-spacing:.3em;font-size:.68rem}
@@ -696,7 +695,7 @@ footer .logo{width:168px;padding:16px 18px;margin:0 auto 16px;background:var(--p
   </section>
 
   <section class="reveal" id="celebrations">
-    <div class="sec-h"><svg viewBox="-56 -84 112 86"><use href="#fan3-line" stroke-width="1.1"/></svg><h2>The celebrations</h2><p>14 – 16 November · Jaipur</p></div>
+    <div class="sec-h"><svg viewBox="-56 -84 112 86"><use href="#fan3-line" stroke-width="1.1"/></svg><h2>The celebrations</h2><p>15 – 16 November · Jaipur</p></div>
     <div id="cards"></div>
   </section>
 
@@ -707,7 +706,7 @@ footer .logo{width:168px;padding:16px 18px;margin:0 auto 16px;background:var(--p
   </section>
 
   <footer>
-      <img class="logo" src="assets/logo.webp" alt="AS monogram, #AkshiSawRabh" loading="lazy"><p>With love, the Jain &amp; Sogani families</p>
+      <img class="logo" src="assets/logo.webp" alt="AS monogram, #AkshiSawRabh" loading="lazy"><p>With love, Bohra Family</p>
   </footer>
 </main>
 
@@ -719,11 +718,12 @@ footer .logo{width:168px;padding:16px 18px;margin:0 auto 16px;background:var(--p
   { const nog = $(".c-dear .nog"); if (nog && new URLSearchParams(location.search).get("guest")) nog.hidden = true; }
   $("#chips").innerHTML = I.events.map(e => `<a href="#${e.id}" style="--c:${e.hue}" data-for="${e.id}" data-open="${e.id}"><i></i>${e.name}</a>`).join("");
     const tileTag = e => `${e.day.slice(0, 3)} ${e.dnum} ${e.month.slice(0, 3)}`;
+    const regular = I.events.filter(e => !e.main); if (regular.length % 2) regular[regular.length - 1].wide = true; // no half-empty row
     $("#cards").innerHTML = `<div class="tiles">` + I.events.map(e => `
-    <button type="button" class="tile${e.main ? " main" : ""}${e.dark ? " dark" : ""}" id="${e.id}" style="--c:${e.hue}" data-open="${e.id}" aria-label="${e.name}, ${e.day} ${e.dnum} ${e.month}, ${e.time}. Open details">
+    <button type="button" class="tile${e.main ? " main" : ""}${e.wide ? " wide" : ""}${e.dark ? " dark" : ""}" id="${e.id}" style="--c:${e.hue}" data-open="${e.id}" aria-label="${e.name}, ${e.day} ${e.dnum} ${e.month}, ${e.time}. Open details">
       <img src="assets/scene-${e.id}.webp" alt="" loading="lazy"${e.pos ? ` style="object-position:${e.pos}"` : ""}>
-      <span class="tag">${tileTag(e)}</span>
-      <span class="tx"><h3>${e.name}</h3><span class="tm">${e.sub ? e.sub : e.time}</span></span>
+      <span class="tag">${tileTag(e)}<b>${e.time}</b></span>
+      <span class="tx"><h3>${e.name}</h3>${e.sub ? `<span class="tm">${e.sub}</span>` : ""}</span>
       <span class="go" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2l4 4-4 4"/></svg></span>
     </button>`).join("") + `</div>`;
 
